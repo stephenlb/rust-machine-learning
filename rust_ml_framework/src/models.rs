@@ -1,12 +1,12 @@
-use crate::layers::{Dense, Layer};
+use crate::layers::Layer;
 use ndarray::Array2;
 
 pub struct Sequential {
-    pub layers: Vec<Dense>,
+    pub layers: Vec<Box<dyn Layer>>,
 }
 
 impl Sequential {
-    pub fn new(layers: Vec<Dense>) -> Self {
+    pub fn new(layers: Vec<Box<dyn Layer>>) -> Self {
         Self { layers }
     }
 
