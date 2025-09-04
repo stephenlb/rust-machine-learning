@@ -23,7 +23,7 @@ impl SGD {
 mod tests {
     use super::*;
     use crate::models::Sequential;
-    use crate::layers::{Dense, Layer};
+    use crate::layers::{Dense};
     use crate::activations::Sigmoid;
     use ndarray::array;
 
